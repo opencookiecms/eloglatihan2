@@ -146,7 +146,7 @@ class Mkursus extends CI_Model {
         {
             $data = array(
                 'atid',
-                'one',
+                'one'=>$h,
             );
 
             $this->db->where('id', $h);
