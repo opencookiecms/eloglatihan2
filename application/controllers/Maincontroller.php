@@ -225,20 +225,23 @@ class  Maincontroller extends CI_Controller {
         $ic = $this->input->post('ic');
         $nobadan = $this->input->post('nb');
 
-        echo $nobadan .'hari'. $hari, $ic.'thiis id'.$id;
+        $data['hari'] = $hari;
+
      
         $data['getget']= $this->Mkursus->userkursusfind($nobadan, $id);
-
+    
         $this->load->view('pages/tumb.php',$data);  
     }
 
     public function tumbprintset()
     {
-        $idk = $this->input->post('id');
-        $hari =  $this->input->post('hari');
-  
+        $id = $this->input->post('id');
+        $hari =  $this->input->post('h');
 
-    
+        $this->Mkursus->kehadiranset($id, $hari);
+        $this->load->view('pages/donetumb.php');
+        
+        
     }
 
 }

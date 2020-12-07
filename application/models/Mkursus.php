@@ -136,22 +136,91 @@ class Mkursus extends CI_Model {
         $this->db->where('kursusattn.kursusid', $id);
 
         $query = $this->db->get();
-
-        return $query->result();   
+        return $query->result(); 
     }
 
-    public function kehadiranset($h)
+    public function kehadiranset($id, $h)
     {
-        if($h = 1)
-        {
-            $data = array(
-                'atid',
-                'one'=>$h,
-            );
+        
+        switch ($h) {
+            case '1':
+                $data = array(
+                    'atid'=>$id,
+                    'one'=>1,
+                );
+    
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
 
-            $this->db->where('id', $h);
-            $this->db->update('kursusattn',$data);
-          
+            case '2':
+                $data = array(
+                    'atid'=>$id,
+                    'two'=>1,
+                );
+    
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+            case '3':
+                $data = array(
+                    'atid'=>$id,
+                    'three'=>1,
+                );
+        
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                 break;
+            case '4':
+                $data = array(
+                    'atid'=>$id,
+                    'four'=>1,
+                );
+            
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+            case '5':
+                $data = array(
+                    'atid'=>$id,
+                    'five'=>1,
+                );
+                
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+            case '6':
+                $data = array(
+                    'atid'=>$id,
+                    'six'=>1,
+                );
+                    
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+            case '7':
+                $data = array(
+                    'atid'=>$id,
+                    'seven'=>1,
+                );
+                        
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+            case '8':
+                $data = array(
+                    'atid'=>$id,
+                    'eight'=>1,
+                );
+                        
+                $this->db->where('atid', $id);
+                $this->db->update('kursusattn',$data); 
+                break;
+                
+            
+            default:
+                # code...
+                break;
         }
 
     }

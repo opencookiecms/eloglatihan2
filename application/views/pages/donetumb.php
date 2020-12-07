@@ -30,38 +30,15 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Pengesahan</b>Kehadiran</a>
+    <a href="../../index2.html"><b>Terima</b>Kasih</a>
   </div>
+
+  <div class="login-logo">
+    <a href="../../index2.html">Kehadiran Anda Sudah Direkodkan</a>
+  </div>
+
   <!-- /.login-logo -->
-  <div class="login-box-body">
 
-
-
-    <?php foreach ($getget as $row): ?>
-    <p class="login-box-msg">Nama</p>
-    <?php  echo form_open('kursus/tumbprintset'); ?>
-      <div class="form-group has-feedback">
-
-
-        <input type="text" class="form-control" value="<?php echo $row->nama?>" name="us" placeholder="No Badan" readonly>
-        <input type="text" name="h" value="<?php echo $hari?>"/>
-
-        <input type="text" name="id" value="<?php echo $row->atid?>"/>
-    
-
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      
-      <div class="row">
-        <!-- /.col -->
-      <div class="col-xs-12">
-          <button type="submit" class="btn btn-success btn-block btn-flat">Hadir</button>
-      </div>
-      <!-- /.col -->
-      </div>
-    </form>
-    <?php endforeach; ?>
-  </div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
