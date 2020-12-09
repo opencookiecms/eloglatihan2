@@ -244,6 +244,12 @@ class  Maincontroller extends CI_Controller {
         
     }
 
+
+    public function kemaskini()
+    {
+        
+    }
+
 }
 
 /* End of file maincontroller.php */
