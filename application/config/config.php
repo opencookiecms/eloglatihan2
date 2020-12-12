@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost:8080/eloglatihan2/';
-//$config['base_url'] = 'http://localhost/eloglatihan2/';
-$config['base_url'] = 'http://192.168.64.2/eloglatihan2/';
+$config['base_url'] = 'http://localhost/eloglatihan2/';
+//$config['base_url'] = 'http://192.168.64.2/eloglatihan2/';
 
 /*
 |--------------------------------------------------------------------------

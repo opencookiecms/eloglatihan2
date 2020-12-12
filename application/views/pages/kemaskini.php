@@ -42,20 +42,33 @@
                                    </tr>
                                </thead>
                                <tbody>
-
+                               <?php $bil=0;?>
+                                <?php foreach ($kem as $row): $bil++?>
     
                                 <tr>
-                         
-
-                                 <td></td>
-                                 <td></td>
-                                 <td></td>
+                                 <td><?php echo $bil ?></td>
+                                 <td><?php echo $row->nama ?></td>
+                                 <td><?php echo $row->jawatan ?></td>
                                  <td></td>
 
-                                 <td></td>
+                                 <td>
+                               
+
+                                 <?php if($row->totalcome==null)
+                                 {
+                                     echo "tidak terlibat sebarang kursus";
+                                 }
+                                 else
+                                 { 
+                                     echo $row->totalcome;
+                                 }
+                                ?>
+                                 
+                                 </td>
                                  <td>kemaskini</td>
                            
                                </tr>
+                               <?php endforeach; ?>
                              </tbody>
                            </table>
                     </div>

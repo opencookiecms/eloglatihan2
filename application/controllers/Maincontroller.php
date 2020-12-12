@@ -247,13 +247,31 @@ class  Maincontroller extends CI_Controller {
 
     public function kemaskini()
     {
+        $data['kem'] = $this->Mkursus->kemaskiniKursus();
         $this->load->view('based/head.php');
         $this->load->view('based/nav.php');
         $this->load->view('based/sidebar.php');
-        $this->load->view('pages/kemaskini.php');
+        $this->load->view('pages/kemaskini.php',$data);
         $this->load->view('based/footer.php');
         $this->load->view('based/scripts.php');
         
+    }
+
+    public function kursusCheck($id="")
+    {
+        $data['kc'] = $this->Mkursus->kursusChecker($id);
+        $data['kid'] = $this->Mkursus->getkbyid($id);
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/kursuscheck.php',$data);
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
+    }
+
+    public function kursuscase()
+    {
+          
     }
 
 }

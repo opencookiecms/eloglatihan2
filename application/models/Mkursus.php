@@ -230,6 +230,31 @@ class Mkursus extends CI_Model {
         //SELECT *, SUM(one+two+three+four+five+six+seven+eight) as con FROM kursusattn
         //LEFT JOIN usersbomba ON usersbomba.id = kursusattn.userid
         //GROUP by usersbomba.id
+
+        $this->db->select('*,SUM(one+two+three+four+five+six+seven+eight) as totalcome');
+        $this->db->from('kursusattn');
+        $this->db->join('usersbomba','usersbomba.id=kursusattn.userid','right');
+        $this->db->group_by('usersbomba.id');
+ 
+        $query = $this->db->get();
+        return $query->result(); 
+    }
+
+    public function kursusChecker($id)
+    {
+        //SELECT * FROM kursus LEFT JOIN kursusattn on kursusattn.kursusid=kursus.kid LEFT JOIN usersbomba on kursusattn.userid = usersbomba.id WHERE kursus.kid=1
+
+        $this->db->select('*');
+        $this->db->from('kursus');
+        $this->db->join('kursusattn','kursusattn.kursusid=kursus.kid');
+        $this->db->join('usersbomba','kursusattn.userid = usersbomba.id');
+        $this->db->where('kursus.kid',$id);
+
+        $query = $this->db->get();
+
+        return $query->result();
+
+
     }
     
 

@@ -84,7 +84,7 @@
                                 <tr>
 
                                     <td><?php echo $bil ; ?></td>
-                                    <td><?php echo $row->tajukkursus ?></a>
+                                    <td><a href="<?php echo site_url('kursus/kursus-check/'.$row->kid) ?>"><?php echo $row->tajukkursus ?></a>
                                     </td>
                                     <td><?php echo $row->tmula ?></td>
                                     <td><?php echo $row->takhir ?></td>
