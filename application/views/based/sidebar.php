@@ -54,7 +54,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i>Kemaskini Kehadiran</a></li>
+            <li><a href="<?php echo site_url('pengguna/kemaskini-kursus') ?>"><i class="fa fa-circle-o"></i>Kemaskini Kehadiran</a></li>
           </ul>
         </li>
         <li class="treeview">

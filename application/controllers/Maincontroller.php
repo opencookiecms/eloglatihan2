@@ -247,6 +247,12 @@ class  Maincontroller extends CI_Controller {
 
     public function kemaskini()
     {
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/kemaskini.php');
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
         
     }
 

@@ -224,6 +224,13 @@ class Mkursus extends CI_Model {
         }
 
     }
+
+    public function kemaskiniKursus()
+    {
+        //SELECT *, SUM(one+two+three+four+five+six+seven+eight) as con FROM kursusattn
+        //LEFT JOIN usersbomba ON usersbomba.id = kursusattn.userid
+        //GROUP by usersbomba.id
+    }
     
 
 }
