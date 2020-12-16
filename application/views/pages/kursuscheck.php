@@ -55,7 +55,7 @@
                 </table>
 
                 <br>
-                <a type="button" class="btn btn-primary btn-sm" href="" target="_blank">
+                <a type="button" class="btn btn-primary btn-sm" href="<?php echo site_url('kursus/tambah-peserta/'.$kid[0]->kid)?>" target="_blank">
                   Tambah Peserta
                 </a>
    
@@ -502,7 +502,7 @@
                             <?php endswitch; ?>
 
                     
-                     <td></td>
+                            <td><a href="" class="btn btn-danger" role="button" onclick="return confirm('Anda Pasti?');" ><i class="fa fa-trash" aria-hidden="true"></i></a></td>
    
                     </tr>
                     <?php endforeach; ?>

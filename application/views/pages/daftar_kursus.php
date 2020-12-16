@@ -29,7 +29,7 @@
                     <!-- /.box-header -->
                     <!-- form start -->
                     <div class="box-body">
-                        <?php  echo form_open_multipart('daftar-kursus', 'class="form-horizontal"'); ?>
+                        <?php  echo form_open_multipart('kursus/tambah-kursus', 'class="form-horizontal"'); ?>
 
                         <div class="form-group">
                             <div class="col-md-5">

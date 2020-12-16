@@ -55,7 +55,7 @@
                                  <td><<?php echo $row->unitsokongan ?></td>
 
                                  <td>0</td>
-                                 <td><a href="l_individu.php?usrIcNo=<?php echo $row->nobadan ?>" class="btn btn-success"><i class="fa fa-list" aria-hidden="true"></i>
+                                 <td><a href="<?php echo site_url('kursus/individual/'.$row->id) ?>" class="btn btn-success"><i class="fa fa-list" aria-hidden="true"></i>
 </a> <a href="e_user.php?usrId=<?php echo $row->nobadan ?>" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i>
 </a> <a href="daftarrem.php?usrId=<?php echo $row->nobadan ?>" class="btn btn-danger" role="button" onclick="return confirm('Anda Pasti?');"><i class="fa fa-trash" aria-hidden="true"></i>
 </a></td>

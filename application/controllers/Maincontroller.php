@@ -269,10 +269,22 @@ class  Maincontroller extends CI_Controller {
         $this->load->view('based/scripts.php');
     }
 
-    public function kursuscase()
+
+
+    public function kursusterlibat($id="")
     {
-          
+
+        $data['userjoin'] = $this->Mkursus->userjoinkursus($id);
+        $data['getuser'] = $this->Mkursus->getUsersbyid($id);
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/kursus_i.php',$data);
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
     }
+
+
 
 }
 

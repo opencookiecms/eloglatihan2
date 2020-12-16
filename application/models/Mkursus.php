@@ -256,6 +256,26 @@ class Mkursus extends CI_Model {
 
 
     }
+
+    public function userjoinkursus($id)
+    {
+        //SELECT *,SUM(one+two+three+four+five+six+seven+eight) as con FROM `usersbomba`
+       // LEFT JOIN kursusattn on usersbomba.id=kursusattn.userid
+       // WHERE usersbomba.id=1
+        //GROUP by kursusattn.atid
+
+       
+       $this->db->select('*, SUM(one+two+three+four+five+six+seven+eight) as con');
+       $this->db->from('usersbomba');
+       $this->db->join('kursusattn','kursusattn.userid=usersbomba.id');
+       $this->db->join('kursus','kursus.kid = kursusattn.kursusid');
+       $this->db->where('usersbomba.id',$id);
+       $this->db->group_by('kursusattn.atid');
+
+       $query = $this->db->get();
+
+       return $query->result();
+    }
     
 
 }

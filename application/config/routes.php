@@ -12,6 +12,7 @@ $route['kursus/scanqr/(:num)/(:num)'] = 'Maincontroller/generateQR/$1/$2';
 $route['kursus/pengesahan/(:num)/(:num)'] = 'Maincontroller/pegesahanid/$1/$2/';
 $route['kursus/tumb'] = 'Maincontroller/tumbrint';
 $route['kursus/kursus-check/(:num)'] = 'Maincontroller/kursusCheck/$1';
+$route['kursus/individual/(:num)'] = 'Maincontroller/kursusterlibat/$1';
 $route['kursus/tumbprintset'] = 'Maincontroller/tumbprintset';
 $route['pengguna/kemaskini-kursus'] = 'Maincontroller/kemaskini';
 $route['pengguna/tambah-pengguna'] = 'Maincontroller/addUsers';
