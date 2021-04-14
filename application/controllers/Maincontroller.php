@@ -6,6 +6,7 @@ class  Maincontroller extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('Html2pdflib');
         $this->load->helper('url');
 		$this->load->model('Mkursus');
     }
@@ -283,6 +284,22 @@ class  Maincontroller extends CI_Controller {
         $this->load->view('based/footer.php');
         $this->load->view('based/scripts.php');
     }
+
+    public function glaporan()
+    {
+        $this->load->view('based/head.php');
+        $this->load->view('based/nav.php');
+        $this->load->view('based/sidebar.php');
+        $this->load->view('pages/glaporan.php');
+        $this->load->view('based/footer.php');
+        $this->load->view('based/scripts.php');
+    }
+
+    public function klaporan()
+    {
+        $this->load->view('pages/laporanprint.php');
+    }
+
 
 
 
